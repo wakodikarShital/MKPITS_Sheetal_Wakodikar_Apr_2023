@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+   
+}
+
+   
+li{
+    display: inline-block;
+    justify-content: center;
+}
+img{
+    height: 50px;
+    width: 95%;
+    float: left;
+}
+ul{
+    background-color: rgb(155, 236, 89);
+    width: 100%;
+    font-size: 25px;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+   
+
+}
+button{
+    width: 100px;
+    height: 40px;
+    background-color:  rgb(7,45,45);
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 150px;
+}
+a{
+    color: rgb(14, 6, 6);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 16px;
+}
+.abc{
+    margin-right: 400px;
+}
+td{
+    font-size: 30px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Pangolin', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Roboto Slab', serif;
+
+}
+table{
+    border-left: 4px solid greenyellow;
+    padding: 70px;
+    margin: 100px;
+}
+.but1{
+    border: 2px solid rgb(179, 239, 88);
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    padding: 6px;
+    width: 200px;
+
+}
+.but2{
+    background-color: greenyellow;
+    color: rgb(14, 50, 14);
+    font-weight: bold;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    padding: 6px;
+    width: 200px;
+}
+a:hover{
+   box-shadow: 5px 2px 4px 4px rgb(47, 133, 47) ;
+   color: rgb(203, 24, 24);
+}
+.but1:hover{
+    background-color: greenyellow;
+    color: black;
+}
+.but2:hover{
+    background-color: rgb(12, 50, 12);
+    color: white;
+    border: 2px solid rgb(179, 239, 88);
+    
+}
+button:hover{
+    background-color: rgb(102, 24, 175);
+}

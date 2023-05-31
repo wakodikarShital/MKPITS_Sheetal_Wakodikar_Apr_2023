@@ -1,0 +1,33 @@
+img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 700px;
+}
+li{
+    display: inline-block;
+   
+}
+ul{
+    background-color: rgb(42, 132, 165);
+    width: 100%;
+    
+    padding-bottom: 26px;
+    padding-top: 13px;
+    
+}
+a{
+    text-decoration: none;
+    color: rgb(16, 15, 15);
+    font-weight: bold;
+    font-size: 26px;
+    padding: 16px;
+}
+/* a:hover{
+    background-color: gray;
+} */
+a:hover{
+    border-bottom: 2px solid red;
+}
+
+

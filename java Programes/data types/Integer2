@@ -1,0 +1,15 @@
+class Integer3{
+int addinteger(int integer1 ,int integer2){
+	return (integer1+integer2);
+
+}
+
+
+
+class Integer2{
+public static void main(String[]args){
+	Integer3 integer3 = new Integer3();
+		int sum = integer3.addinteger(10,20);
+		System.out.println(sum);
+}
+}

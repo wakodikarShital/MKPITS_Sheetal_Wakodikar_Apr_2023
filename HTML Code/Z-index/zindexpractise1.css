@@ -1,0 +1,51 @@
+.class1{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    position: relative;
+    z-index: 1;
+    top: 10px;
+    
+    
+
+}
+.class2{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(248, 72, 72);
+    position: absolute;
+    z-index: 2;
+    top: 42px;
+    left: 35px;
+
+}
+.class3{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    z-index: 3;
+    top: 65px;
+    left: 60px;
+}
+.class4{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(248, 72, 72);
+    position: absolute;
+    z-index: 4;
+    top: 90px;
+    left: 85px;  
+}
+.class5{
+    height: 20px;
+    width: 20px;
+    background-color:red;
+    position: absolute;
+    z-index: 5;
+    top: 105px;
+    left: 100px;
+}
+body{
+    background-color: black;
+}

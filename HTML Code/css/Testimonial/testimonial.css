@@ -1,0 +1,45 @@
+img{
+    height:90px;
+    width: 100px;
+    border: 1px solid gray;
+    position: absolute;
+    top: -60px;
+    
+}
+.details{
+    height: 180px;
+    width: 350px;
+    text-align: justify;
+    border: 1px solid gray;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 8px;
+    bottom: 500px;
+    box-shadow: 1px 1px 1px 1px rgb(175, 156, 156);
+}
+.card{
+    
+    width: 400px;
+    height: 500px;
+    align-items: center;
+    display: flex;
+    left: 500px;
+    position: relative;
+    
+    margin: 100px;
+    padding: 60px;
+    
+
+}
+h2{
+    color: red;
+    padding: 5px;
+}
+.details p:hover{
+    transform: scale(0.8);
+
+}
+.card:hover{
+    transform: scale(0.8);
+
+}

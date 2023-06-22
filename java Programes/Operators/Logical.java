@@ -13,7 +13,7 @@ public static void main(String[]args){
 	   System.out.println((10>20) || (10<20));
 	   System.out.println((10<20) || (10<20));
 	   
-	   System.out.println("Enter the result of  operation");
+	   System.out.println("Enter the result of Not  operation");
 	   System.out.println(!(10>20)) ;
 	   System.out.println(!(10<20));
 	   

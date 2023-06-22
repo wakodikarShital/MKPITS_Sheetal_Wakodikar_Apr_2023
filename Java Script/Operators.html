@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <h1>JavaScript ArithmeticAssignment</h1>
+
+<button onclick="add()">AdditionAssignment</button>
+<button onclick="sub()">SubtractionAssignment</button>
+<button onclick="mul()">MultiplicationAssignment</button>
+<button onclick="Div()">DivisionAssignment</button>
+<button onclick="modul()">ModulsAssignment</button>
+
+
+<p id="operator"></p>
+
+<script>
+var x = 10;
+x += 5;
+function add(){
+document.getElementById("operator").innerHTML = x;
+}
+
+var a=10;
+    a -= 6;
+    function sub(){
+
+    document.getElementById("operator").innerHTML=a;
+}
+var m=10;
+    m *= 6;
+    function mul(){
+
+    document.getElementById("operator").innerHTML=m;
+}
+var n=6;
+    n /= 2;
+    function Div(){
+
+    document.getElementById("operator").innerHTML=n;
+}
+var b=6;
+    b %= 50;
+    function modul(){
+
+    document.getElementById("operator").innerHTML=b;
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

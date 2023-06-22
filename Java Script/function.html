@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+
+    <button onclick="add()">Add</button>
+    <button onclick="mul()">sUB</button>
+    <button onclick="sub()">Mul</button>
+    <button onclick="div()">Div</button>
+    <button onclick="fullname()">Name</button>
+    <!-- <button onclick="add(),mul(),sub(),div(),fullname()">all</button> -->
+    <h2 id="res"></h2>
+    
+    <script>
+
+        let Firstname= "Shital",
+        Lastname="Wakodikar";
+        
+
+        function fullname(){
+            let fullname=Firstname +" "+ Lastname;
+            document.getElementById("res").innerHTML=fullname;
+        }
+        
+
+        let x=10;
+        y=20;
+
+
+        function add() {
+            let z=x+y;
+            document.getElementById("res").innerHTML=z;
+        }
+        function mul(){
+            let z=x*y;
+            document.getElementById("res").innerHTML=z;
+        }
+        function sub(){
+            let z=x-y;
+            document.getElementById("res").innerHTML=z;
+        }
+        function div(){
+            let z=y/x;
+            document.getElementById("res").innerHTML=z;
+        }
+        
+
+    </script>
+</body>
+</html>

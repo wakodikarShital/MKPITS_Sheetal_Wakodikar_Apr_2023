@@ -1,0 +1,25 @@
+body{
+    background: rgb(68,58,180);
+background: linear-gradient(90deg, rgba(68,58,180,1) 0%, rgba(32,29,253,0.8240546218487395) 53%, rgba(252,176,69,1) 100%);
+}
+.div1{
+    height: 100px;
+    width: 100%;
+    background: rgba(239, 27, 27, 0.25);
+box-shadow: 0 8px 32px 0 rgba(6, 16, 153, 0.37);
+backdrop-filter: blur( 3.5px );
+-webkit-backdrop-filter: blur( 3.5px );
+border-radius: 10px;
+border: 1px solid rgba(49, 9, 9, 0.18);
+
+}
+.div2{
+    height: 100px;
+    width: 100%;
+    background: rgba( 255, 255, 255, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 12.5px );
+-webkit-backdrop-filter: blur( 12.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}

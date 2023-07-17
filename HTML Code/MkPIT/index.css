@@ -1,0 +1,232 @@
+/* body{
+    background-image: url(image2.jpg);
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+} */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-header{
+    background-color: rgb(36, 76, 76);
+    color: white;
+    height: 20px;
+    width: 100%;
+
+}
+.dropdown-menu{
+    
+    background-color: black; 
+    opacity: 0.7;
+}
+
+.dropdown-item{
+    font-weight: bold;
+    color:white;
+    
+}
+/* .nav-link-color {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    
+    color: white;
+
+} */
+/* .nav-item-right{
+    margin-right: 70px;
+}
+.nav .ul .li a{
+    color: aliceblue;
+} */
+.mkpit_logo{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -12px;
+    border-radius: 50%;
+    right: 770px;
+    background: rgb(7,0,0);
+background: radial-gradient(circle, rgba(7,0,0,1) 0%, rgba(67,240,241,0.7596288515406162) 54%, rgba(2,7,7,1) 100%);
+   
+}
+.collapse{
+    background: rgb(7,0,0);
+    background: radial-gradient(circle, rgba(7,0,0,1) 0%, rgba(67,240,241,0.7596288515406162) 54%, rgba(2,7,7,1) 100%);
+   padding: 15px;
+}
+
+.navbar{
+    position: relative;
+   
+}
+/* .nav-item-ll{
+margin-right: 150px;
+}
+
+a{
+    color: white;
+} */
+.active{
+    
+    font-weight: bold;
+    font-size: 20px;
+}
+.image1{
+    width: 100%;
+}
+/* li {
+    padding: 10px;
+   
+} */
+
+.content{
+    margin-left: 350px;
+}
+.nav1{
+    margin-left: 150px;
+}
+.navbar{
+padding-top: 0;
+padding-bottom: 0;
+position: sticky;
+}
+.box{
+    /* background-image: url(image2.jpg); */
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+}
+.image1{
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+.content1{
+    color: white;
+   
+    font-weight: bold;
+    position: absolute;
+    top: 200px;
+    margin-left: 100px;
+}
+h3{
+    font-size: 50px;
+   
+}
+h4{
+    font-weight: bold;
+}
+.button1{
+  width: 150px;
+  height: 50px;
+  color: aliceblue;
+  background-color: rgb(14, 11, 18);
+  border: 2px solid white;
+  position: absolute;
+  top: 400px;
+  margin-left: 100px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.Header4{
+    text-align: center;
+}
+.paragraph1{
+    display: flex;
+    align-items: center;
+}
+/* .fa-solid{ */
+    /* text-shadow: 2px 4px 4px 5px solid gray ;
+   
+    box-shadow: 2px 4px 4px 5px solid gray; */
+/* } */
+h1{
+    color: rgb(255, 0, 0);
+}
+/* section
+{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(57,57,79,1) 100%);
+    opacity: 0.5;
+} */
+.p-3{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(57,57,79,1) 100%);
+
+}
+.container1{
+    height: 400px;
+    width: 100%;
+    /* border:1px solid gray; */
+    box-shadow: 2px 2px 4px 5px  gray;
+    position: relative;
+    border-radius: 10px;
+    padding: 25px;
+
+}
+.container2{
+   background-color: rgb(253, 255, 255);
+   color: rgb(8, 8, 8);
+    height: 170px;
+    width: 75%;
+    /* border:1px solid gray; */
+    box-shadow: 4px 4px 5px 5px  gray;
+    padding: 20px;
+    position: absolute;
+    top: 2080px;
+    left: 200px;
+    border-radius: 10px;
+
+} 
+.companyLogo{
+    height: 150px;
+    width: 200px;
+}
+.card2{
+    height: 300px;
+    position: relative;
+    border-top-left-radius: 20%;
+
+}
+.stReview{
+    height: 150px;
+    width: 150px;
+    background-color: aliceblue;
+    border: 1px solid rgb(196, 191, 191);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 200px;
+    /* left: 5px; */
+}
+.h2Header{
+   margin-left: 150px;
+   padding: 15px;
+   color: red;
+}
+.paragrah2{
+    margin-top: 50px;
+}
+/* .dropdown-divider{
+   
+} */
+/* .card-img-top{ */
+    /* height: 200px;
+    width: 200px; */
+    /* border-radius: 50%;
+    position: absolute;
+    z-index: 1; */
+    
+/* } */
+/* .card1{
+    position: relative;
+} */
+
+
+

@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+
+}
+button{
+    padding: 15px;
+    font-weight: bold;
+    background-color: aqua;
+    border-radius: 15%;
+    border: 2px solid red;
+}
+#div2{
+    display:none;
+}
+.image{
+    width: 200px;
+}

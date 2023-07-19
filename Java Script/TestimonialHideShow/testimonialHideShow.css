@@ -1,0 +1,28 @@
+.stReview{
+    height: 150px;
+    width: 150px;
+    background-color: aliceblue;
+    border: 1px solid rgb(196, 191, 191);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 200px;
+    /* left: 5px; */
+}
+.h2Header{
+   margin-left: 150px;
+   padding: 15px;
+   color: red;
+}
+.paragrah2{
+    margin-top: 50px;
+}
+button{
+    padding: 15px;
+    border-radius: 20%;
+}
+body{
+    padding: 15px;
+}
+#div2{
+    display: none;
+}

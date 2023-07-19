@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index2.css">
+  <title> Calculator Main</title>
+ 
+</head>
+<body>
+
+
+ 
+    <!-- for user input -->
+
+  <table border="1" cellspacing="0" cellpadding="6px" align="center">
+    <tr><th>Calculator</th></tr>
+    <tr><td><input type="number" id="number1" placeholder="Enter the number"></td></tr><br>
+    <tr><td><input type="number" id="number2"  placeholder="Enter the number"></td></tr>
+    </table>
+
+    <!-- For Operator Buttons -->
+
+    <table border="1" cellspacing="0" cellpadding="3px" align="center">
+    <tr>
+      <td><button onclick="addittion()">+</button></td>
+      <td><button onclick="substraction()">-</button></td>
+      <td><button onclick="Multiplication()">*</button></td>
+      <td><button onclick="Division()">/</button></td>
+      <td> <button onclick="Modulus()">%</button></td>
+    </tr>
+  </table>
+
+  <!-- For Output -->
+  <table border="1" cellspacing="0" cellpadding="6px" align="center">
+    <tr>
+     <td id="result" class="td1"></td>
+    </tr>
+  </table>
+
+
+  
+
+
+
+
+  <script>
+        
+        
+       
+        
+
+    function addittion(){
+        var number1=parseInt(document.getElementById("number1").value);
+        var number2= parseInt(document.getElementById("number2").value);
+        var answer = number1+number2;
+        document.getElementById("result").innerHTML= answer;
+        
+    }
+    function substraction(){
+        var number1=parseInt(document.getElementById("number1").value);
+        var number2= parseInt(document.getElementById("number2").value);
+        var answer = number1-number2;
+        document.getElementById("result").innerHTML=answer;
+    }
+    function Multiplication(){
+        var number1=parseInt(document.getElementById("number1").value);
+        var number2= parseInt(document.getElementById("number2").value);
+        var answer = number1*number2;
+        document.getElementById("result").innerHTML=answer;
+    }
+    function Division(){
+        var number1=parseInt(document.getElementById("number1").value);
+        var number2= parseInt(document.getElementById("number2").value);
+        var answer = number1/number2;
+        document.getElementById("result").innerHTML=answer;
+    }
+    function Modulus(){
+        var number1=parseInt(document.getElementById("number1").value);
+        var number2= parseInt(document.getElementById("number2").value);
+        var answer = number1%number2;
+        document.getElementById("result").innerHTML=answer;
+    }
+
+  
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

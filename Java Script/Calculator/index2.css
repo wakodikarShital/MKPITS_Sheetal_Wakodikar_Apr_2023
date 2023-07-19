@@ -1,0 +1,33 @@
+input{
+    height: 25px;
+    width: 200px;
+    background-color: rgb(248, 225, 167);
+    color:rgb(34, 29, 29);
+    font-weight: bold;
+}
+
+button{
+    height: 35px;
+    width: 37px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.td1{
+    width: 206px;
+    height: 30px;
+    
+
+}
+table{
+    background-color: black;
+    color: aliceblue;
+   width: 20%;
+   padding: 15px;
+   
+   
+}
+td{
+    text-align: center;
+}

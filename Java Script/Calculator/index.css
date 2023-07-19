@@ -1,0 +1,6 @@
+div{
+    height: 20px;
+    width: 100px;
+    border: 1px dotted black;
+    box-shadow: 3px 3px 5px 5px solid rgb(179, 175, 175);
+}

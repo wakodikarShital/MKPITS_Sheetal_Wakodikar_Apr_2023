@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="door.css">
+    <title>Open And Closed Door Hide Show</title>
+</head>
+<body>
+
+    <center><h3 style="color: white;">Open And Closed Door Hide Show</h3></center>
+    
+    <center><div id="div1">
+        <center><button onclick="openClosedDoor()">Open Door</button></center><br><br>
+        <img src="opendoor-removebg-preview.png" alt="" class="image">
+        
+        
+
+    </div>
+    <div id="div2">
+        <button onclick="openClosedDoor()">Closed Door</button><br><br>
+        <img src="doorclosed-removebg-preview.png" alt="" class="image1">
+        
+       
+
+    </div>
+</center>
+    
+
+    <script>
+        function openClosedDoor(){
+                if(document.getElementById("div1").style.display=='none'){
+                    document.getElementById("div1").style.display='block';
+                    document.getElementById("div2").style.display='none';
+
+                }
+                else{
+                    document.getElementById("div1").style.display='none';
+                    document.getElementById("div2").style.display='block';
+
+                }
+            }
+    </script>
+</body>
+</html>

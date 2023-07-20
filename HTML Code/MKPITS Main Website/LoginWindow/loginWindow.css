@@ -1,0 +1,19 @@
+.card{
+  box-shadow: 3px 3px 4px 5px rgb(16, 13, 22);
+  margin-top: 100px;
+  background: rgb(7,0,0);
+background: linear-gradient(90deg, rgba(7,0,0,1) 0%, rgba(27,62,65,0.6896008403361344) 49%, rgba(2,7,7,1) 100%);
+ 
+
+  
+}
+.logo{
+    height: 70px;
+    width: 70px;
+    align-items: center;
+}
+body{
+   
+    background: rgb(7,0,0);
+background: linear-gradient(90deg, rgba(7,0,0,1) 0%, rgba(80,34,247,0.6896008403361344) 49%, rgba(2,7,7,1) 100%);
+}

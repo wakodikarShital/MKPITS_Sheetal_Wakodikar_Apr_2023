@@ -1610,3 +1610,16 @@ background: linear-gradient(0deg, rgb(236, 241, 239) 0%, rgba(255, 255, 255, 0.7
     width: 40px;
 
   }
+  .aboutSection{
+    background-color: #022b3c;
+    /* background-image: url(about.jpg); */
+  }
+  .product-item-img{
+    height: 300px;
+    width: 400px;
+  }
+  .section-heading{
+    height: 300px;
+    width: 300px ;
+    background-color: #c3bfbf;
+  }

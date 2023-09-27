@@ -45,19 +45,35 @@ update Employess_Salary_Structure set Employee_Salary = 60000 where Employee_Id=
 update Bank_Employees_Details set Address = 'Nagpur' where Address is null
 
 //-- alter for field add in table
-alter table Employess_Salary_Structure add dob DATE
+alter table Bank_Employees_Details add city int
 alter table Employess_Salary_Structure add date_transaction DATE
 update Employess_Salary_Structure set date_transaction = '2023-9-15 ' where Account_Name = 'SBI'
 update Employess_Salary_Structure set date_transaction = '2023-9-25 ' where Employee_Id in(3,5,6)
 update Employess_Salary_Structure set date_transaction = '2023-9-22 ' where Employee_Salary between 30000 and 60000
 update Employess_Salary_Structure set date_transaction = '2023-9-29 ' where date_transaction is null
 
-alter table Employess_Salary_Structure drop dob
+alter table Employess_Salary_Structure drop city
+
+
+-- assignment queries
+select Account_Holder_Name,Account_Number from Accounts_Detail
+select Account_Number from Accounts_Detail
+select Address from Bank_Employees_Details where Address = 'Nagpur'
+select Employee_Salary from Employess_Salary_Structure where Employee_Id = '1'
+select count(Employee_Salary) from Employess_Salary_Structure 
+select * from Employess_Salary_Structure  where Employee_Id = '5'
 
 
 
 
-
+-- constraint
+create database Shop_Managment
+use Shop_Managment
+create table customer(customer_id int , name varchar(15) , city char(10),
+constraint c_id  primary key(customer_id)
+)
+show tables
+select * from  customer
 
 
 

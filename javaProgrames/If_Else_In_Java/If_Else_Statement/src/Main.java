@@ -11,6 +11,9 @@ public class Main {
         CheckOddAndEven checkOddAndEven = new CheckOddAndEven();
         checkOddAndEven.oddAndEven();
 
+        System.out.println("--------------------- if else if-----------------");
+        IfElseIf_program ifElseIfProgram = new IfElseIf_program();
+        ifElseIfProgram.checkCondition();
 
 
     }

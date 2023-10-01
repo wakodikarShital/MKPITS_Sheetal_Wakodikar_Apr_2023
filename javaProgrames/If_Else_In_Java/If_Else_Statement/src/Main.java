@@ -15,6 +15,9 @@ public class Main {
         IfElseIf_program ifElseIfProgram = new IfElseIf_program();
         ifElseIfProgram.checkCondition();
 
+        System.out.println("-----------------------Button System Condition--------------");
+        ButtonSystemCondition buttonSystemCondition = new ButtonSystemCondition();
+        buttonSystemCondition.buttonSystem();
 
     }
 }

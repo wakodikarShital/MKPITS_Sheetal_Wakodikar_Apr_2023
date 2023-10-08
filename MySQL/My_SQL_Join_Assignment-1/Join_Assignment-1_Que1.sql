@@ -1,16 +1,24 @@
--- Assignment-2------
+-- -------- Assignment-1--------
 use sakila
 show tables
 
--- Que1. Retrieve the names of all customers and the titles of the films they have rented.
-select * from film
-select * from customer
-select * from rental
-select * from category
-
+-- Que1. Get the titles of all films rented by the customer named "William Brown".
+select title from film
 select first_name,last_name from customer
-select title from film 
 
-select first_name,last_name,rental_date
-from customer join rental 
-on rental.customer_id=customer.customer_id
+select first_name,last_name,title from customer
+join rental
+on customer.customer_id=rental.customer_id
+join inventory
+on inventory.inventory_id=rental.inventory_id
+join film
+on film.film_id=inventory.film_id
+
+
+
+
+'
+
+
+
+

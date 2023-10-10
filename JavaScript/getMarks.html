@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="getMarks.js"></script>
+</head>
+<body>
+
+
+<button onclick="getMarks(60)">Submit</button><br>
+
+<!-- //------ From user input -->
+
+<input type="text" id="t1" ><button onclick="marksUser(document.getElementById('t1').value)">User Input</button></input><br>
+
+<!-- //------ Applied validation on that the text block -->
+
+<input type="text" id="t2" onblur="validate(document.getElementById('t2').value)">
+<button>onclik</button>
+
+
+<!-- //------ Shows the list of cities on browser and on console log also -->
+
+<button onclick="myArray()">List</button>
+
+
+
+
+</body>
+</html>

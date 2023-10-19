@@ -1,0 +1,30 @@
+1. Find customers who rented a specific film:
+Retrieve the names of customers who rented the film with the title 'Inception'.
+
+2. Find films rented by a specific customer:
+Retrieve the titles of films rented by a customer with a given customer_id.
+
+3. Find rental details for the most recent rental:
+Retrieve the rental details for the most recent rental transaction in the database.
+
+4. Find the average rental duration compared to the overall average:
+Compare the average rental duration of films in a specific category with the overall average rental duration.
+
+5. Find films with rental counts above average:
+Retrieve films with rental counts greater than the average number of rentals across all films.
+
+6. Find customers who rented the same film as another customer:
+Identify customers who rented the same film as a specific customer (based on customer_id).
+
+7. Find customers who have rented from both stores:
+Identify customers who have rented films from both store_id 1 and store_id 2.
+
+8. Find actors who have appeared in the same film:
+Retrieve actors who have appeared in the same film as a specific actor (based on actor_id).
+
+9. Find films rented by top-revenue customers:
+Retrieve film titles rented by customers who are among the top 10 in terms of total rental revenue.
+
+10. Find films that have not been rented:
+Retrieve titles of films that have not been rented by any customer.
+

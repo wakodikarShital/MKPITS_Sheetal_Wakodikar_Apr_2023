@@ -1,0 +1,17 @@
+2. Explain the purpose and benefits of a clustered index and a non-clustered index. When would you use one over the other?
+Ans :
+ -------------  Explain the purpose of a clustered index ?
+Ans : Clustered indexes sort and store the data rows in the table or view based on their key values. 
+These key values are the columns included in the index definition.  There can be only one clustered index per table, because the data rows themselves can be stored in only one order.
+
+
+ -------------  Explain the benifits of a clustered index ?
+Clustering indexes can improve the performance of most query operations . because they provide a more linear access path to data, which is stored in pages.Cluster index offers faster data accessing.
+
+-------------  Explain the purpose of a Non-clustered index ?
+Ans : Non-clustered indexes are created to improve the performance of frequently used queries not covered by the clustered index or to locate rows in a table without a clustered index (called a heap).
+ You can create multiple nonclustered indexes on a table or indexed view.
+
+-------------  Explain the benifits of a Non-clustered index ?
+Ans : A non-clustering index helps you to retrieves data quickly from the database table.
+A table may have multiple non-clustered indexes in RDBMS.So, it can be used to create more than one index.Helps you to avoid the overhead cost associated with the clustered index.

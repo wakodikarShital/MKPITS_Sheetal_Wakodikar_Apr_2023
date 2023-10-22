@@ -1,0 +1,5 @@
+4. Discuss scenarios where indexing might not be beneficial or could potentially degrade database performance.
+Ans : 
+indexing makes columns faster to query by creating pointers to where data is stored within a database. Imagine you want to find a piece of information that is within a large database. 
+Any SQL Server table configuration where performance suffers due to excessive, improper, or missing indexes is considered to be poor indexing.
+Extra memory is needed for the indexing data structure.

@@ -73,7 +73,135 @@ public class Banking_Service {
         }
        return  resultSet;
     }
-    
-    
-    
+
+    //---------------------- deposit amount--------------------------------------------------------------------
+
+    public int depositAmount(Transactions transactions){
+        Banking_Service.connection();
+        int updateAmount=0;
+        try{
+            //----------------------- insert deposite amount -----------------------------------------------
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into transactions values(?,?,?,?)");
+            preparedStatement.setString(1,transactions.getUserId());
+            preparedStatement.setDate(2,transactions.getTransactionDate());
+            preparedStatement.setDouble(3,transactions.getDepositAmount());
+            preparedStatement.setString(4,transactions.getTransactionType());
+            int value2=preparedStatement.executeUpdate();
+
+            //----------------------- update deposite amount -----------------------------------------------
+            preparedStatement =connection.prepareStatement(" update Account_details set accountBalance =accountBalance+? where customerUserId=? ");
+            preparedStatement.setDouble(1,transactions.getDepositAmount());
+            preparedStatement.setString(2,transactions.getUserId());
+            updateAmount = preparedStatement.executeUpdate();
+
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+
+        return updateAmount;
+    }
+
+
+    //---------------------- withdraw amount--------------------------------------------------------------------
+
+    public int withdrawAmount(Transactions transactions){
+        Banking_Service.connection();
+        int updateAmount=0;
+        try{
+            //----------------------- insert deposite amount -----------------------------------------------
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into transactions values(?,?,?,?)");
+            preparedStatement.setString(1,transactions.getUserId());
+            preparedStatement.setDate(2,transactions.getTransactionDate());
+            preparedStatement.setDouble(3,transactions.getDepositAmount());
+            preparedStatement.setString(4,transactions.getTransactionType());
+            int value2=preparedStatement.executeUpdate();
+
+            //----------------------- update deposite amount -----------------------------------------------
+            preparedStatement =connection.prepareStatement(" update Account_details set accountBalance =accountBalance-? where customerUserId=? ");
+            preparedStatement.setDouble(1,transactions.getDepositAmount());
+            preparedStatement.setString(2,transactions.getUserId());
+            updateAmount = preparedStatement.executeUpdate();
+
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+
+        return updateAmount;
+    }
+
+    //--------------------------- Transfer In _ Amount debited --------------------------------------------------
+    public int debitedAmount(Transactions transactions){
+        Banking_Service.connection();
+        int updateBalance=0;
+        try{
+            //----------------------- insert into transaction -------------------------------------------
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into transactions values(?,?,?,?)");
+            preparedStatement.setString(1, transactions.getUserId());
+            preparedStatement.setDate(2,transactions.getTransactionDate());
+            preparedStatement.setDouble(3,transactions.getDepositAmount());
+            preparedStatement.setString(4,transactions.getTransactionType());
+            int amountdebited = preparedStatement.executeUpdate();
+
+            //----------------------------- update account_details balance ------------------------------------
+            preparedStatement = connection.prepareStatement(" update Account_details set accountBalance =accountBalance+? where customerUserId=?");
+            preparedStatement.setDouble(1,transactions.getDepositAmount());
+            preparedStatement.setString(2, transactions.getUserId());
+            updateBalance = preparedStatement.executeUpdate();
+
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+        return updateBalance;
+    }
+
+    //--------------------------- Transfer out _ Amount credited --------------------------------------------------
+    public int creditedAmount(Transactions transactions1){
+        Banking_Service.connection();
+        int updateBalance2=0;
+
+        try{
+            //----------------------- insert into transaction -------------------------------------------
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into transactions values(?,?,?,?)");
+            preparedStatement.setString(1, transactions1.getUserId());
+            preparedStatement.setDate(2,transactions1.getTransactionDate());
+            preparedStatement.setDouble(3,transactions1.getDepositAmount());
+            preparedStatement.setString(4,transactions1.getTransactionType());
+            int amountCredited = preparedStatement.executeUpdate();
+
+            //----------------------------- update account_details balance ------------------------------------
+            preparedStatement = connection.prepareStatement(" update Account_details set accountBalance =accountBalance-? where customerUserId=?");
+            preparedStatement.setDouble(1,transactions1.getDepositAmount());
+            preparedStatement.setString(2, transactions1.getUserId());
+            updateBalance2 = preparedStatement.executeUpdate();
+
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+        return updateBalance2;
+    }
+
+    //-------------------------------------- Statement ---------------------------------
+
+    public ResultSet statement(Transactions transactions ){
+        Banking_Service.connection();
+        try{
+            PreparedStatement  preparedStatement =connection.prepareStatement(" select transactionDate,ammount,transactionType from transactions where customerUserId = ?");
+            preparedStatement.setString(1,transactions.getUserId());
+            resultSet=preparedStatement.executeQuery();
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+        return resultSet;
+    }
+
 }
+

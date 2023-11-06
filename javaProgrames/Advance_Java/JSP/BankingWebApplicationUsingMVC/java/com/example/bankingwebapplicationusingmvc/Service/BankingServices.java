@@ -2,11 +2,10 @@ package com.example.bankingwebapplicationusingmvc.Service;
 
 import com.example.bankingwebapplicationusingmvc.Model.AccountDetails;
 import com.example.bankingwebapplicationusingmvc.Model.Transactions;
+import com.example.bankingwebapplicationusingmvc.model.AccountDetails;
+import com.example.bankingwebapplicationusingmvc.model.Admin;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 
 public class BankingServices {
     Connection connection;
@@ -74,6 +73,57 @@ public class BankingServices {
         }catch(Exception exception){
             System.out.println(exception);
         }
+        return result;
+    }
+
+    //--------------------------------------------------Admin Approved Log In check-----------------------------------------------------
+
+    public ResultSet adminLogin(Admin admin){
+        ResultSet resultSet=null;
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from admins where userId=? and password=?");
+            preparedStatement.setString(1,admin.getAdminUserId());
+            preparedStatement.setString(2,admin.getPassword());
+            resultSet= preparedStatement.executeQuery();
+
+
+        }catch(Exception exception){
+            System.out.println(exception);
+        }
+        return resultSet;
+    }
+
+    public ResultSet displayRecords(){
+        ResultSet resultSet1=null;
+        try{
+            Statement statement=connection.createStatement();
+            resultSet1=statement.executeQuery("select customerUserId,customerName,address,city,accountBalance,is_Approved,created_On from Account_details");
+
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        return  resultSet1;
+    }
+
+    public int approved(AccountDetails accountDetails){
+        int result=0;
+        try {
+
+
+            PreparedStatement preparedStatement = connection.prepareStatement("update account_details set is_Approved = 'true' , approved_At =? ,approved_By=? where customerUserId=?");
+
+            preparedStatement.setDate(1,accountDetails.getApprovedAt());
+            preparedStatement.setString(2,accountDetails.getApprovedBy());
+            preparedStatement.setString(3,accountDetails.getAppUserId());
+            result=preparedStatement.executeUpdate();
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+
+
         return result;
     }
 

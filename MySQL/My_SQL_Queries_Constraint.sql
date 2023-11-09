@@ -45,9 +45,11 @@ alter table customer add constraint default_city  default  city is 'Nagpur'
 
 
 
-
-
-
+use student_managment_system
+select * from student_detastudent_detailsils
+student_details_view
+use sakila
+select * from actor 
 
 
 -- constraint
@@ -58,3 +60,5 @@ constraint c_id  primary key(customer_id)
 )
 show tables
 select * from  customer
+
+use student_managment_system

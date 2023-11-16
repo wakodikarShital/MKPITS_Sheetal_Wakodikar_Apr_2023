@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <beans 
+     xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        
+        <bean id="student" class="StudentDetails.Student">
+            <constructor-arg value="01"></constructor-arg>
+            <constructor-arg value="Teju"></constructor-arg>
+            <constructor-arg value="Nagpur"></constructor-arg>
+            
+        </bean>    
+        
+      
+        
+        <bean id="address" class="employee.Address">
+            <constructor-arg value="Nagpur"></constructor-arg>
+            <constructor-arg value="Maharashtra"></constructor-arg>
+            
+        </bean>
+
+    <bean id="emp" class="employee.Employee">
+        <constructor-arg value="01"></constructor-arg>
+        <constructor-arg value="Shital"></constructor-arg>
+        <constructor-arg>
+            <ref bean="address"></ref>
+        </constructor-arg>
+    </bean>
+    
+    
+
+    
+    <bean id="que" class="question.Questions">
+        <constructor-arg value="101" type="int"></constructor-arg>
+        <constructor-arg value="What is the colour of rose ?"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>Pink</value>
+                <value>Blue</value>
+                <value>Red</value>
+            </list>
+        </constructor-arg>   
+    </bean>
+    
+    
+    </beans>
+    
+

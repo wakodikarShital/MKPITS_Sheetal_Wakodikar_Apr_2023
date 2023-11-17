@@ -16,13 +16,13 @@ public class Questions {
     
     private int questionNumber;
     private String name;
-    private List<String> answers;
+    private List<Answer> answers;
 
     public Questions() {
     }
     
 
-    public Questions(int questionNumber, String name, List<String> answers) {
+    public Questions(int questionNumber, String name, List<Answer> answers) {
         this.questionNumber = questionNumber;
         this.name = name;
         this.answers = answers;
@@ -31,7 +31,7 @@ public class Questions {
     public void showAnswer(){
         System.out.println(questionNumber +" : "+ name);
         System.out.println("Anwser : ");
-        Iterator<String> iterat = answers.iterator();
+        Iterator<Answer> iterat = answers.iterator();
         while(iterat.hasNext()){
             System.out.println(iterat.next());
         }

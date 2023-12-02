@@ -28,4 +28,23 @@ public class StudentDaoImpl implements StudentDao {
         Student student = entityManager.find(Student.class,roll_Number);
         return student;
     }
+
+    // for use update and insert only
+    @Override
+    public Student save(Student student) {
+        return entityManager.merge(student);
+    }
+
+    @Override
+    public Student delete(int roll_Number) {
+        Student student = entityManager.find(Student.class,roll_Number);
+        entityManager.remove(student);
+        return student;
+    }
+
+    @Override
+    public List<Student> inserMultiple(List<Student> studentList) {
+
+        return entityManager.merge(studentList);
+    }
 }

@@ -3,10 +3,7 @@ package com.example.SpringBootRestApplication.rest;
 import com.example.SpringBootRestApplication.entity.Student;
 import com.example.SpringBootRestApplication.service.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +34,22 @@ public class RestControl {
 //        return studentService.findPerticularRecord(1);
 //    }
 
-  
+    // for use update and insert only
+    @PostMapping("/Student")
+    public Student insertRecord(@RequestBody Student student){
+        return studentService.saveRecord(student);
+    }
+
+    @PostMapping("/insertMultiple")
+    public List<Student> insertMultipleRecords(@RequestBody List<Student> studentList){
+        return studentService.insertMultipleRecorde(studentList);
+
+    }
+
+    @DeleteMapping("/Student/{roll_Number}")
+    public Student deleteRecords(@PathVariable int roll_Number){
+        return studentService.deleteRecorde(roll_Number);
+    }
 
     @GetMapping("/Student")
     public List<Student> getStudent(){

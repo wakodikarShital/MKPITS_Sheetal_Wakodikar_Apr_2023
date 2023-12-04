@@ -51,6 +51,11 @@ public class RestControl {
         return studentService.updateRecord(roll_Number,new Student());
     }
 
+    @PostMapping("/updateMultiple")
+    public String updateMultipleRecords(@RequestBody Student student){
+        return studentService.updateMultiple(student);
+    }
+
     @DeleteMapping("/Student/{roll_Number}")
     public String deleteRecords(@PathVariable int roll_Number){
          studentService.deleteRecorde(roll_Number);

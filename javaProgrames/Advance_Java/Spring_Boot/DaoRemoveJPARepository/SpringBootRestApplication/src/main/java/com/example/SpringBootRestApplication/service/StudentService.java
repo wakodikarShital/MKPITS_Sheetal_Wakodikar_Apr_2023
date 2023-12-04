@@ -11,6 +11,7 @@ public interface StudentService {
     Student saveRecord(Student student);
     Student updateRecord(Integer roll_Number,Student student);
 
+    String updateMultiple(Student student);
     String deleteRecorde(Integer roll_Number);
     List<Student> insertMultipleRecorde(List<Student> studentList);
 

@@ -6,6 +6,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,6 +52,22 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     @Transactional
+    public String updateMultiple(Student student) {
+        List<Student> studentList = new ArrayList<>();
+        for(int counter=0;counter<=studentList.size();counter++ ) {
+            studentList.add(student);
+        }
+        Optional<Student> optionalStudent = studentRepository.findById(student.getRollNumber());
+        if (optionalStudent.isPresent()){
+            studentRepository.saveAll(studentList);
+            return "Updated";
+        }else {
+            return "Data not found";
+        }
+    }
+
+    @Override
+    @Transactional
     public String deleteRecorde(Integer roll_Number) {
          studentRepository.deleteById(roll_Number);
          return "Successfully deleted";
@@ -61,5 +78,11 @@ public class StudentServiceImpl implements StudentService{
     @Transactional
     public List<Student> insertMultipleRecorde(List<Student> studentList) {
       return studentRepository.saveAll(studentList);
+    }
+
+    @Override
+    @Transactional
+    public List<Student> insertMultipleRecorde(List<Student> studentList) {
+        return studentRepository.saveAll(studentList);
     }
 }

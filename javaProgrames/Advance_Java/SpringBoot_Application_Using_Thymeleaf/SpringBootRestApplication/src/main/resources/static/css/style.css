@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    padding-top:20px ;
+    background-color:cornflowerblue;
+    height: 100px;
+}
+div{
+    margin:auto;
+    /*border: 2px solid #1f093a;*/
+    background-color: #166c9c;
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    box-shadow: 4px 4px 4px 4px #166c9c;
+
+}
+
+/*----------- info.html css ------------*/
+input{
+
+}

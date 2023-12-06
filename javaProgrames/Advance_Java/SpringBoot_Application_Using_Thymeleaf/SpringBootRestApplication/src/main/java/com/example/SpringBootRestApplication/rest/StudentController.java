@@ -40,5 +40,13 @@ public class StudentController {
         return "processData";
     }
 
+    @GetMapping("/getStudents")
+    public String displayStudents(Model model){
+        Student student = new Student(1,"Nikhil","Nagpur","Tandapeth");
+
+        model.addAttribute("students",student);
+        return "displayStudent";
+    }
+
 
 }

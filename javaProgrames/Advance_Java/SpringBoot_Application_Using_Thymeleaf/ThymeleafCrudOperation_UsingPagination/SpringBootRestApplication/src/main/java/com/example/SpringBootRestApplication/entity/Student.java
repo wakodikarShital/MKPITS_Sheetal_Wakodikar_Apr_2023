@@ -1,8 +1,6 @@
 package com.example.SpringBootRestApplication.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
@@ -18,19 +16,19 @@ public class Student {
     public Student() {
     }
 
-    public Student(int roll_Number, String name, String city, String address) {
-        this.roll_Number = roll_Number;
+    public Student(int rollno, String name, String city, String address) {
+        this.rollno = rollno;
         this.name = name;
         this.city = city;
         this.address = address;
     }
 
-    public int getRollNumber() {
-        return roll_Number;
+    public int getRollno() {
+        return rollno;
     }
 
-    public void setRollNumber(int roll_Number) {
-        this.roll_Number = roll_Number;
+    public void setRollno(int rollno) {
+        this.rollno = rollno;
     }
 
     public String getName() {
@@ -60,7 +58,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "roll_Number= " + roll_Number +
+                "roll_Number= " + rollno +
                 ", name='" + name + '\'' +
                 ", city='" + city + '\'' +
                 ", address='" + address + '\'' +

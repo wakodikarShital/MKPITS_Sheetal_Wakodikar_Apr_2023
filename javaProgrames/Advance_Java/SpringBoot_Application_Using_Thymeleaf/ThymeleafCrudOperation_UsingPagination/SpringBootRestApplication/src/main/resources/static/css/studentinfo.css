@@ -1,0 +1,42 @@
+table{
+    width: 25%;
+    height: 300px;
+    border: 2px solid gray;
+    box-shadow: 4px 4px 5px 4px gray;
+    margin-top: 80px;
+    background-color: #bbdee8;
+}
+input{
+    width: 400px;
+    border :none;
+    border: 1px solid skyblue;
+    border-bottom: 3px solid blue;
+    border-radius: 8px;
+
+}
+.submit{
+    border: none;
+    width: 150px;
+    padding: 5px;
+    background-color: deepskyblue;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+}
+label{
+    font-weight: bold;
+    font-size: 18px;
+}
+.register{
+    font-size: 25px;
+    font-weight: bold;
+    color: orangered;
+    align-items: center;
+}
+body{
+    background-color: #e4edf3;
+}
+
+
+

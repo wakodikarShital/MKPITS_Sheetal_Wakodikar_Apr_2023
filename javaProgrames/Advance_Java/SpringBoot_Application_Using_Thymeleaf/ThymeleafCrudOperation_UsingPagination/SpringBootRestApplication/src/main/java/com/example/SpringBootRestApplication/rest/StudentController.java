@@ -4,6 +4,9 @@ import com.example.SpringBootRestApplication.entity.Student;
 import com.example.SpringBootRestApplication.service.StudentService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("")
 public class StudentController {
 
     @Autowired
@@ -28,7 +30,7 @@ public class StudentController {
     @GetMapping("/StudentList")
     public String displayStudentList(Model model){
         List<Student> studentList = studentService.findAllStudents();
-        model.addAttribute("listOfStudent" , studentList);
+        model.addAttribute("listOfStudent" ,studentList);
         return "listOfStudent";
     }
 
@@ -43,27 +45,31 @@ public class StudentController {
     @PostMapping("/save")
     public String saveStudent(@ModelAttribute("student1") Student newStudent){
         studentService.save(newStudent);
-        return "redirect:/StudentList";
+        return "redirect:/pagination";
     }
 
-    //----------------- update student record ---------------------
+//----------------- update student record ---------------------
     @GetMapping("/updateStudent")
-    public String update(@RequestParam("rollno") int roll_Num, Model model){
+    public String update(@RequestParam("rollno") int roll_Num,Model model){
         Student student = studentService.updateRecord(roll_Num);
         model.addAttribute("student1" , student);
         return "studentInfo";
     }
 
-    //---------------- delete particular student -----------------
+//---------------- delete student record -------------------
     @GetMapping("/deleteStudent")
     public String delete(@RequestParam("rollno") int roll_Num){
-        studentService.delete(roll_Num);
-        return "redirect:/StudentList";
+         studentService.delete(roll_Num);
+        return "redirect:/pagination";
     }
 
-
-
-
+//----------------- find all student data with pagination ------------------
+    @GetMapping("/pagination")
+    public String pagination(@PageableDefault(size=5) Pageable pageable, Model model) {
+        Page<Student> studentPage = studentService.getPage(pageable);
+        model.addAttribute("page", studentPage);
+        return "pagination";
+    }
 
 
 

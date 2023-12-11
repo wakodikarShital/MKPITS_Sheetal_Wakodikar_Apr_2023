@@ -44,6 +44,8 @@ public class StudentController {
 //---------------- save student to database ------------------
     @PostMapping("/save")
     public String saveStudent(@ModelAttribute("student1") Student newStudent){
+        /** convert string into integer (Number Format exception)= Integer.parseInt(newStudent.getName());*/
+        Integer.parseInt(newStudent.getName());
         studentService.save(newStudent);
         return "redirect:/pagination";
     }
@@ -70,8 +72,11 @@ public class StudentController {
         model.addAttribute("page", studentPage);
         return "pagination";
     }
-
-
+//----------------- error page --------------------------------
+    @ExceptionHandler(value = NumberFormatException.class)
+    public String errorPage(){
+        return "errorPage";
+    }
 
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/studentinfo.css}">
+    <title>Title</title>
+</head>
+<body>
+
+<table align="center" cellpadding="10px">
+<form th:action="@{/save}" th:object="${student1}" method="post">
+    <tr><td class="register" align="center">Student Registration</td></tr>
+    <tr><td><label>Roll No. : </label></td></tr>
+    <tr><td><input type="text" th:field="*{rollno}" placeholder="Enter Roll Number"></td></tr><br><br>
+    <tr><td><label>Name : </label></td></tr>
+    <tr><td><input type="text" th:field="*{name}" placeholder="Enter Name"></td></tr><br><br>
+    <tr><td><label>City : </label></tr>
+    <tr><td><input type="text" th:field="*{city}" placeholder="Enter City"></td></tr><br><br>
+    <tr><td><label>Address : </label></tr>
+        <tr><td><input  type="text" th:field="*{address}" placeholder="Enter Address"></td></tr>
+        <tr><td align="center"><input type="submit" name="submit" class="submit"></td></tr>
+
+</form>
+</table>
+
+
+
+</form>
+</body>
+</html>

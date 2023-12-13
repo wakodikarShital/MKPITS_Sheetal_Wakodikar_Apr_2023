@@ -1,0 +1,141 @@
+
+1. What is Spring Boot?
+A) A programming language
+B) A framework for building microservices
+C) An operating system
+D) A build automation tool
+
+2. Which annotation is used to enable Spring Boot in a Java class?
+A) @EnableSpringBoot
+B) @SpringBootApplication
+C) @SpringBootEnable
+D) @EnableAutoConfiguration
+
+3. What is the purpose of the application.properties file in Spring Boot?
+A) To store database schema
+B) To configure application properties
+C) To define Spring Bean dependencies
+D) To write SQL queries
+
+4. Which embedded server does Spring Boot support by default?
+A) Apache Tomcat
+B) Jetty
+C) WildFly
+D) All of the above
+
+5. What is the purpose of the @RestController annotation in Spring Boot?
+A) To define a JPA entity
+B) To create a singleton bean
+C) To define a RESTful web service
+D) To configure database connection pooling
+
+6. What is Spring Boot Starter?
+A) A starter motor for cars
+B) A lightweight container
+C) A set of pre-configured dependencies
+D) A design pattern in Spring framework
+
+7. Which annotation is used to inject dependencies in Spring Boot?
+A) @Autowired
+B) @Inject
+C) @Dependency
+D) @InjectDependency
+
+8. What is the purpose of the @SpringBootTest annotation in Spring Boot testing?
+A) To enable Spring Boot testing
+B) To define a Spring Bean
+C) To mock database connections
+D) To configure application logging
+
+9. Which of the following is NOT a valid stereotype annotation in Spring Boot?
+A) @Controller
+B) @Service
+C) @Entity
+D) @Component
+
+10. What is the default packaging format for a Spring Boot application?
+A) JAR
+B) WAR
+C) EAR
+D) ZIP
+
+11. Which annotation is used to handle exceptions globally in a Spring Boot application?
+A) @ExceptionHandler
+B) @ExceptionHandle
+C) @GlobalException
+D) @GlobalExceptionHandler
+
+12. What is the purpose of the Spring Boot Actuator module?
+A) To enable automatic scaling of applications
+B) To provide production-ready features like health checks and metrics
+C) To handle security in Spring Boot applications
+D) To manage database transactions
+
+13. What is the purpose of the @RequestMapping annotation in Spring Boot controllers?
+A) To define a request mapping for a specific URL
+B) To configure database connections
+C) To specify the MIME type of a response
+D) To enable cross-origin resource sharing (CORS)
+
+14. Which of the following is a Spring Boot feature for externalized configuration?
+A) @ConfigurationProperties
+B) @ExternalConfig
+C) @ConfigSettings
+D) @PropertyConfig
+
+15. How can you override default Spring Boot property values in application.properties?
+A) By using the @OverrideProperties annotation
+B) By using the @PropertyOverride annotation
+C) By providing a custom application.properties file
+D) By using the @Value annotation
+
+16. What is the purpose of the spring.factories file in a Spring Boot project?
+A) To configure bean definitions
+B) To enable auto-configuration
+C) To define JPA entities
+D) To specify database connection details
+
+17. Which of the following annotations is used to enable asynchronous method execution in Spring Boot?
+A) @Async
+B) @Asynchronous
+C) @ExecuteAsync
+D) @EnableAsync
+
+18. What is the purpose of the @ConditionalOnProperty annotation in Spring Boot?
+A) To conditionally enable or disable a bean based on a property
+B) To configure database connections
+C) To define a custom exception
+D) To enable cross-origin resource sharing (CORS)
+
+19. How does Spring Boot simplify the process of creating a RESTful web service?
+A) By providing default implementations for common tasks
+B) By eliminating the need for annotations
+C) By removing the need for dependency injection
+D) By using a different programming language
+
+20. Which of the following is a build tool commonly used with Spring Boot projects?
+A) Maven
+B) Gradle
+C) Ant
+D) Make
+
+Descriptive Questions:
+1. Explain the role of the @SpringBootApplication annotation in a Spring Boot application.
+
+2. Describe the difference between @Component, @Repository, @Service, and @Controller annotations in Spring Boot. Provide examples of scenarios where each might be used.
+
+3. Explain the concept of Spring Boot auto-configuration. How does it work, and how can you customize it?
+
+4. Describe the purpose and use of the Spring Boot Actuator module. Provide examples of some commonly used endpoints provided by Actuator.
+
+5. Explain the significance of the application.properties or application.yml file in a Spring Boot application. How can you use it for configuration?
+
+6. Describe the use of the @RestController annotation in Spring Boot. How is it different from the @Controller annotation?
+
+7. Explain the purpose of the @Autowired annotation in Spring Boot. Provide an example of its usage in dependency injection.
+
+8. Describe the role of the embedded servlet containers (e.g., Tomcat, Jetty) in Spring Boot. How can you change the default embedded container?
+
+9. Explain the purpose of the @Async annotation in Spring Boot. Provide an example of a scenario where asynchronous processing is beneficial.
+
+10. Discuss the importance of testing in a Spring Boot application. What are some common testing strategies and tools used in Spring Boot development?

@@ -5,6 +5,9 @@ import com.example.springBootAdvanceMapping.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
@@ -22,5 +25,27 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee findPerticular(Integer emp_id) {
        return employeeRepository.findById(emp_id).get();
+    }
+
+    @Override
+    public List<Employee> findAll() {
+        return employeeRepository.findAll();
+    }
+
+    @Override
+    public Employee updateRecord(Employee employee) {
+        Optional<Employee> employeeOptional = employeeRepository.findById(employee.getEmployee_id());
+        if(employeeOptional.isPresent()){
+            employeeRepository.save(employee);
+        }else {
+            System.out.println("Data not fetch");
+        }
+        return employee;
+    }
+
+    @Override
+    public String deleteByEmp_Id(Integer emp_Id) {
+        employeeRepository.deleteById(emp_Id);
+        return "Record deleted" ;
     }
 }

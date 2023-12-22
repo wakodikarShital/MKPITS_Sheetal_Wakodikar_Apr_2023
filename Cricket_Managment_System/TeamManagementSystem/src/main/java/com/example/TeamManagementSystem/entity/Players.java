@@ -1,6 +1,8 @@
 package com.example.TeamManagementSystem.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.sql.Date;
@@ -8,6 +10,7 @@ import java.sql.Date;
 @Entity
 public class Players {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int player_id;
     private String first_name;
     private String last_name;
@@ -15,28 +18,27 @@ public class Players {
     private String nationality;
     private String city;
     private double percentage_of_fitness;
-    private String isbowler;
-    private String isbatsman;
-    private String isallrounder;
-    private String iswicketkeeper;
+    private String is_bowler;
+    private String is_batsman;
+    private String is_all_rounder;
+    private String is_wicket_keeper;
 
 
 
     public Players() {
     }
 
-    public Players(int player_id, String first_name, String last_name, Date date_of_birth, String nationality, String city, double percentage_of_fitness, String isbowler, String isbatsman, String isallrounder, String iswicketkeeper) {
-        this.player_id = player_id;
+    public Players(String first_name, String last_name, Date date_of_birth, String nationality, String city, double percentage_of_fitness, String is_bowler, String is_batsman, String is_all_rounder, String is_wicket_keeper) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.date_of_birth = date_of_birth;
         this.nationality = nationality;
         this.city = city;
         this.percentage_of_fitness = percentage_of_fitness;
-        this.isbowler = isbowler;
-        this.isbatsman = isbatsman;
-        this.isallrounder = isallrounder;
-        this.iswicketkeeper = iswicketkeeper;
+        this.is_bowler = is_bowler;
+        this.is_batsman = is_batsman;
+        this.is_all_rounder = is_all_rounder;
+        this.is_wicket_keeper = is_wicket_keeper;
     }
 
     public int getPlayer_id() {
@@ -96,34 +98,34 @@ public class Players {
     }
 
     public String getIsbowler() {
-        return isbowler;
+        return is_bowler;
     }
 
     public void setIsbowler(String isbowler) {
-        this.isbowler = isbowler;
+        this.is_bowler = is_bowler;
     }
 
     public String getIsbatsman() {
-        return isbatsman;
+        return is_batsman;
     }
 
     public void setIsbatsman(String isbatsman) {
-        this.isbatsman = isbatsman;
+        this.is_batsman = is_batsman;
     }
 
     public String getIsallrounder() {
-        return isallrounder;
+        return is_all_rounder;
     }
 
     public void setIsallrounder(String isallrounder) {
-        this.isallrounder = isallrounder;
+        this.is_all_rounder = is_all_rounder;
     }
 
     public String getIswicketkeeper() {
-        return iswicketkeeper;
+        return is_wicket_keeper;
     }
 
     public void setIswicketkeeper(String iswicketkeeper) {
-        this.iswicketkeeper = iswicketkeeper;
+        this.is_wicket_keeper = is_wicket_keeper;
     }
 }

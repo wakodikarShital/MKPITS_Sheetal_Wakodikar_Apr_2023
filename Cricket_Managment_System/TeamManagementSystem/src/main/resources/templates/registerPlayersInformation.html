@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Registration Form</h3>
+<form th:action="@{/Save}" th:object="${players}" method="post">
+    First Name : <input type="text" th:field="*{first_name}" placeholder="Enter Roll Number">
+    Last Name : <input type="text" th:field="*{last_name}" placeholder="Enter Roll Number">
+    Date Of Birth : <input type="date" th:field="*{date_of_birth}" placeholder="Enter Roll Number">
+    Nationality : <input type="text" th:field="*{nationality}" placeholder="Enter Roll Number">
+    City : <input type="text" th:field="*{city}" placeholder="Enter Roll Number">
+    Percentage Of Fitness : <input type="number" th:field="*{percentage_of_fitness}" placeholder="Enter Roll Number">
+    Is Bowler : <input type="text" th:field="*{is_bowler}" placeholder="Enter Roll Number">
+    Is Batsman : <input type="text" th:field="*{is_batsman}" placeholder="Enter Roll Number">
+    Is All Rounder : <input type="text" th:field="*{is_all_rounder}" placeholder="Enter Roll Number">
+    Is Wicket Keeper : <input type="text" th:field="*{is_wicket_keeper}" placeholder="Enter Roll Number">
+    <input type="submit" name="submit">
+
+</form>
+
+</body>
+</html>

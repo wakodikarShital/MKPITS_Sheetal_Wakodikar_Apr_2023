@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/insertTeams}" th:object="${team}" method="post">
+    Team id :  <input type="number" th:field="*{team_id}" placeholder="Enter Roll Number">
+    Team Name : <input type="text" th:field="*{team_name}" placeholder="Enter Roll Number">
+    Team Description : <input type="text" th:field="*{team_description}" placeholder="Enter Roll Number">
+    <input type="submit" name="submit">
+
+</form>
+</body>
+</html>
